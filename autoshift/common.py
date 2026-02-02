@@ -221,8 +221,6 @@ class Settings(SettingsFields):
                 path = ROOT_DIR / path
             self.SHIFT_SOURCE = str(path.resolve())
 
-        handler = rich.logging.RichHandler(show_path=False)
-        logging.getLogger("autoshift").addHandler(handler)
 
         for game in self.GAMES:
             self._GAMES_PLATFORM_MAP[game] = set(self.PLATFORMS)

@@ -124,3 +124,7 @@ keys.db
 
 # notebooks folder
 notebooks/
+
+QWEN.md
+GEMINI.md
+config.json

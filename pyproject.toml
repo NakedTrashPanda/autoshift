@@ -16,11 +16,13 @@ dependencies = [
     "peewee>=3.18.2",
     "pydantic-settings>=2.10.1",
     "rich>=14.1.0",
+    "textual>=0.80.0",
     "typer-slim>=0.17.4",
 ]
 
 [project.scripts]
 autoshift = "autoshift:auto.run"
+autoshift-tui = "autoshift:tui.run_tui"
 
 [dependency-groups]
 dev = [

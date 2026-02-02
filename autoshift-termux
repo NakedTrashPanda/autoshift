@@ -1,0 +1,23 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# AutoSHiFt Unified Startup Script
+
+echo "AutoSHiFt - Unified Launcher"
+echo "============================="
+
+# Set up environment
+export HOME="/data/data/com.termux/files/home"
+export PREFIX="/data/data/com.termux/files/usr"
+export LD_LIBRARY_PATH="$PREFIX/lib"
+export PKG_CONFIG_PATH="$PREFIX/lib/pkgconfig"
+
+# Set up data directory
+DATA_DIR="$HOME/.autoshift"
+mkdir -p "$DATA_DIR"
+
+# Set environment variables for the application
+export SHIFT_DATA_DIR="$DATA_DIR"
+export SHIFT_COOKIE_FILE="$DATA_DIR/.cookies.save"
+export SHIFT_DB_FILE="$DATA_DIR/keys.db"
+
+# Run the unified launcher
+python run_autoshift.py "$@"
